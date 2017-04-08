@@ -1261,6 +1261,9 @@ void PropertyLoadBootDefaults() {
     weaken_prop_override_security = false;
 
     update_sys_usb_config();
+
+    // Restore the normal property override security after init extension is executed
+    weaken_prop_override_security = false;
 }
 
 void PropertyLoadDerivedDefaults() {
